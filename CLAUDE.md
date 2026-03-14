@@ -2,7 +2,7 @@
 
 ## Project
 
-FastAPI application template. Python 3.12+, async, no database. Docker via Ubuntu 24.04 LTS.
+FastAPI application template. Python 3.14+, async, no database. Docker via Ubuntu 24.04 LTS.
 
 ## Structure
 

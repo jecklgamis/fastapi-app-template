@@ -7,6 +7,7 @@ A production-ready FastAPI application template with Docker support.
 - **FastAPI** - async web framework
 - **Pydantic v2** - validation and settings management
 - **Docker** - containerized deployment (Ubuntu 24.04 LTS)
+- **Helm** - Kubernetes deployment chart
 - **Ruff** - linting and formatting
 - **pytest** - testing with async support
 
@@ -18,6 +19,8 @@ A production-ready FastAPI application template with Docker support.
 │   ├── config.py           # Environment-specific settings (dev/test/prod)
 │   └── routers/            # API route handlers
 ├── tests/                  # Test suite
+├── deployment/
+│   └── k8s/helm/           # Helm chart and deploy Makefile
 ├── Dockerfile
 ├── Makefile
 └── pyproject.toml
@@ -27,7 +30,7 @@ A production-ready FastAPI application template with Docker support.
 
 ### Prerequisites
 
-- Python 3.12+
+- Python 3.14+
 - [uv](https://github.com/astral-sh/uv) (recommended)
 
 ### Setup
@@ -83,6 +86,41 @@ make lint
 # Auto-fix and format
 make format
 ```
+
+## Helm Chart
+
+A Helm chart is provided in `deployment/k8s/helm/` for Kubernetes deployment.
+
+```bash
+cd deployment/k8s/helm
+
+# Dry run to verify
+make dry-run
+
+# Install
+make install
+
+# Upgrade after changes
+make upgrade
+
+# Rollback
+make rollback
+
+# Uninstall
+make uninstall
+```
+
+Default configuration in `chart/values.yaml`:
+
+| Key                  | Default                                  |
+|----------------------|------------------------------------------|
+| `image.repository`   | `jecklgamis/fastapi-app-template`        |
+| `image.tag`          | `main`                                   |
+| `service.type`       | `ClusterIP`                              |
+| `service.port`       | `80`                                     |
+| `ingress.enabled`    | `true`                                   |
+| `autoscaling.enabled`| `false`                                  |
+| `replicaCount`       | `1`                                      |
 
 ## Configuration
 

@@ -6,7 +6,7 @@ A production-ready FastAPI application template with Docker support.
 
 Run from Docker Hub:
 ```bash 
-docker run --rm -d --name fastapi-app-template -p 8080:8080 -it jecklgamis/fastapi-app-template:main
+docker run --rm --name fastapi-app-template -p 8080:8080 -it jecklgamis/fastapi-app-template:main
 ```
 
 ## Tech Stack

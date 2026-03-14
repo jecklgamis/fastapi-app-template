@@ -4,9 +4,9 @@
 
 A production-ready FastAPI application template with Docker support.
 
-Run example from Docker Hub:
+Run from Docker Hub:
 ```bash 
-docker run -d --name fastapi-app-template -p 8080:8080 -it jecklgamis/fastapi-app-template:main
+docker run --rm -d --name fastapi-app-template -p 8080:8080 -it jecklgamis/fastapi-app-template:main
 ```
 
 ## Tech Stack
@@ -63,10 +63,10 @@ The API will be available at `http://localhost:8080`.
 docker build -t fastapi-app-template .
 
 # Run the container
-docker run -d --name fastapi-app-template -p 8080:8080 fastapi-app-template
+docker run --rm -d --name fastapi-app-template -p 8080:8080 fastapi-app-template
 
 # Stop
-docker stop fastapi-app-template && docker rm fastapi-app-template
+docker stop fastapi-app-template
 ```
 
 ## API Endpoints

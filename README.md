@@ -32,6 +32,7 @@ A production-ready FastAPI application template with Docker support.
 
 - Python 3.14+
 - [uv](https://github.com/astral-sh/uv) (recommended)
+- [Docker](https://www.docker.com/) (for containerized deployment)
 
 ### Setup
 

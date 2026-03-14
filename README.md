@@ -13,7 +13,7 @@ docker run --rm --name fastapi-app-template -p 8080:8080 -it jecklgamis/fastapi-
 
 - **FastAPI** - async web framework
 - **Pydantic v2** - validation and settings management
-- **Docker** - containerized deployment (Python 3.14-slim)
+- **Docker** - containerized deployment (Python 3.12-slim)
 - **Helm** - Kubernetes deployment chart
 - **Ruff** - linting and formatting
 - **pytest** - testing with async support
@@ -37,7 +37,7 @@ docker run --rm --name fastapi-app-template -p 8080:8080 -it jecklgamis/fastapi-
 
 ### Prerequisites
 
-- Python 3.14+
+- Python 3.12+
 - [uv](https://github.com/astral-sh/uv) (recommended)
 - [Docker](https://www.docker.com/) (for containerized deployment)
 

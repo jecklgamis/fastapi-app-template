@@ -6,7 +6,7 @@ A production-ready FastAPI application template with Docker support.
 
 - **FastAPI** - async web framework
 - **Pydantic v2** - validation and settings management
-- **Docker** - containerized deployment (Ubuntu 24.04 LTS)
+- **Docker** - containerized deployment (Python 3.14-slim)
 - **Helm** - Kubernetes deployment chart
 - **Ruff** - linting and formatting
 - **pytest** - testing with async support
